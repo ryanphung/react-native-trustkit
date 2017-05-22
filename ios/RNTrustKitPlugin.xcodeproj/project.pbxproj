@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6279AF401ED2D1280095D018 /* RNTrustKitPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279AF3F1ED2D1280095D018 /* RNTrustKitPlugin.m */; };
+		6279AF8D1ED2E70F0095D018 /* TrustKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6279AF7E1ED2E6FE0095D018 /* TrustKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6279AF7D1ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C8480471A896EE30017C155;
+			remoteInfo = TrustKit;
+		};
+		6279AF7F1ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C8716961B23A91D00267E1D;
+			remoteInfo = TrustKit_Static;
+		};
+		6279AF811ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C8480521A896EE30017C155;
+			remoteInfo = TrustKitTests;
+		};
+		6279AF831ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CA6CBFD1BAE2ADD00BDA419;
+			remoteInfo = "TrustKit OS X";
+		};
+		6279AF851ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CA6CC061BAE2ADD00BDA419;
+			remoteInfo = "TrustKit OS XTests";
+		};
+		6279AF871ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C84CBB21D6E0981009B3E7D;
+			remoteInfo = "TrustKit tvOS";
+		};
+		6279AF891ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C84CBDD1D6E1718009B3E7D;
+			remoteInfo = "TrustKit tvOS Tests";
+		};
+		6279AF8B1ED2E6FE0095D018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC5D24E1D6E64D10074F515;
+			remoteInfo = "TrustKit watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6279AF3A1ED2D1280095D018 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6279AF3C1ED2D1280095D018 /* libRNTrustKitPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTrustKitPlugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6279AF3E1ED2D1280095D018 /* RNTrustKitPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNTrustKitPlugin.h; path = RNTrustKitPlugin/RNTrustKitPlugin.h; sourceTree = "<group>"; };
+		6279AF3F1ED2D1280095D018 /* RNTrustKitPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNTrustKitPlugin.m; path = RNTrustKitPlugin/RNTrustKitPlugin.m; sourceTree = "<group>"; };
+		6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TrustKit.xcodeproj; path = ../../TrustKit/TrustKit.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6279AF391ED2D1280095D018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6279AF8D1ED2E70F0095D018 /* TrustKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		621FBEC21ED2CD71007E3DA8 = {
+			isa = PBXGroup;
+			children = (
+				6279AF3E1ED2D1280095D018 /* RNTrustKitPlugin.h */,
+				6279AF3F1ED2D1280095D018 /* RNTrustKitPlugin.m */,
+				6279AEE71ED2CEB60095D018 /* Products */,
+				6279AF451ED2D8B10095D018 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6279AEE71ED2CEB60095D018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6279AF3C1ED2D1280095D018 /* libRNTrustKitPlugin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6279AF451ED2D8B10095D018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6279AF731ED2E6FE0095D018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6279AF7E1ED2E6FE0095D018 /* TrustKit.framework */,
+				6279AF801ED2E6FE0095D018 /* libTrustKit_Static.a */,
+				6279AF821ED2E6FE0095D018 /* TrustKitTests.xctest */,
+				6279AF841ED2E6FE0095D018 /* TrustKit.framework */,
+				6279AF861ED2E6FE0095D018 /* TrustKit OS XTests.xctest */,
+				6279AF881ED2E6FE0095D018 /* TrustKit.framework */,
+				6279AF8A1ED2E6FE0095D018 /* TrustKit tvOS Tests.xctest */,
+				6279AF8C1ED2E6FE0095D018 /* TrustKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6279AF3B1ED2D1280095D018 /* RNTrustKitPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6279AF421ED2D1280095D018 /* Build configuration list for PBXNativeTarget "RNTrustKitPlugin" */;
+			buildPhases = (
+				6279AF381ED2D1280095D018 /* Sources */,
+				6279AF391ED2D1280095D018 /* Frameworks */,
+				6279AF3A1ED2D1280095D018 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNTrustKitPlugin;
+			productName = RNTrustKitPlugin;
+			productReference = 6279AF3C1ED2D1280095D018 /* libRNTrustKitPlugin.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		621FBEC31ED2CD71007E3DA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					6279AF3B1ED2D1280095D018 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 621FBEC61ED2CD71007E3DA8 /* Build configuration list for PBXProject "RNTrustKitPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 621FBEC21ED2CD71007E3DA8;
+			productRefGroup = 6279AEE71ED2CEB60095D018 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6279AF731ED2E6FE0095D018 /* Products */;
+					ProjectRef = 6279AF721ED2E6FE0095D018 /* TrustKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6279AF3B1ED2D1280095D018 /* RNTrustKitPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6279AF7E1ED2E6FE0095D018 /* TrustKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TrustKit.framework;
+			remoteRef = 6279AF7D1ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF801ED2E6FE0095D018 /* libTrustKit_Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTrustKit_Static.a;
+			remoteRef = 6279AF7F1ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF821ED2E6FE0095D018 /* TrustKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TrustKitTests.xctest;
+			remoteRef = 6279AF811ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF841ED2E6FE0095D018 /* TrustKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TrustKit.framework;
+			remoteRef = 6279AF831ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF861ED2E6FE0095D018 /* TrustKit OS XTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "TrustKit OS XTests.xctest";
+			remoteRef = 6279AF851ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF881ED2E6FE0095D018 /* TrustKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TrustKit.framework;
+			remoteRef = 6279AF871ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF8A1ED2E6FE0095D018 /* TrustKit tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "TrustKit tvOS Tests.xctest";
+			remoteRef = 6279AF891ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6279AF8C1ED2E6FE0095D018 /* TrustKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TrustKit.framework;
+			remoteRef = 6279AF8B1ED2E6FE0095D018 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6279AF381ED2D1280095D018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6279AF401ED2D1280095D018 /* RNTrustKitPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		621FBEC71ED2CD71007E3DA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		621FBEC81ED2CD71007E3DA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		6279AF431ED2D1280095D018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6279AF441ED2D1280095D018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		621FBEC61ED2CD71007E3DA8 /* Build configuration list for PBXProject "RNTrustKitPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				621FBEC71ED2CD71007E3DA8 /* Debug */,
+				621FBEC81ED2CD71007E3DA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6279AF421ED2D1280095D018 /* Build configuration list for PBXNativeTarget "RNTrustKitPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6279AF431ED2D1280095D018 /* Debug */,
+				6279AF441ED2D1280095D018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 621FBEC31ED2CD71007E3DA8 /* Project object */;
+}

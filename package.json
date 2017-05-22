@@ -1,0 +1,38 @@
+{
+  "name": "react-native-trustkit",
+  "version": "0.0.1",
+  "description": "React native integration for TrustKit and TrustKit-Android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjartebore/react-native-trustkit.git"
+  },
+  "keywords": [
+    "trustkit",
+    "ios",
+    "android",
+    "react",
+    "react-native"
+  ],
+  "author": "Bjarte Bore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjartebore/react-native-trustkit/issues"
+  },
+  "homepage": "https://github.com/bjartebore/react-native-trustkit#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1"
+  },
+  "peerDependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
+  }
+}

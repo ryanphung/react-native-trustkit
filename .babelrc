@@ -1,0 +1,8 @@
+{
+"presets": ["react-native-stage-0"],
+"env": {
+  "test": {
+      "presets": ["react-native-stage-0"]
+    }
+  }
+}
