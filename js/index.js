@@ -3,7 +3,7 @@ import {
 } from 'react-native';
 import Ajv from 'ajv';
 
-const ajv = new Ajv({ allErrors: true, jsonPointers: true });
+const ajv = new Ajv({});
 
 const validate = ajv.compile({
   title: 'TrustKitConfiguration',
@@ -21,9 +21,7 @@ const validate = ajv.compile({
             TSKPublicKeyAlgorithms: {
               type: 'array',
               items: {
-                oneOf: [
-                  { type: 'string' },
-                ],
+                enum: ['TSKAlgorithmRsa2048', 'TSKAlgorithmRsa4096'],
               },
             },
             TSKPublicKeyHashes: {
@@ -56,11 +54,14 @@ const validate = ajv.compile({
 });
 
 export default (configuration) => {
-  if (validate(configuration)) {
-    NativeModules.configure(configuration);
-  }
-  else {
-    throw new Error('Configuration not valid');
-  }
+  const { RNTrustKitPlugin } = NativeModules;
 
+  return new Promise((resolve, reject) => {
+    if (validate(configuration)) {
+      debugger;
+      resolve(RNTrustKitPlugin.configure(configuration));
+    } else {
+      reject(new Error('Configuration not valid'));
+    }
+  });
 };

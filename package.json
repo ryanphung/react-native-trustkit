@@ -1,14 +1,14 @@
 {
-  "name": "react-native-trustkit",
-  "version": "0.0.1",
+  "name": "react-native-trustkit-wrapper",
+  "version": "0.0.3",
   "description": "React native integration for TrustKit and TrustKit-Android",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bjartebore/react-native-trustkit.git"
+    "url": "git+https://github.com/Statoil/react-native-trustkit.git"
   },
   "keywords": [
     "trustkit",
@@ -17,21 +17,21 @@
     "react",
     "react-native"
   ],
-  "author": "Bjarte Bore",
+  "author": "Statoil ASA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bjartebore/react-native-trustkit/issues"
+    "url": "https://github.com/statoil/react-native-trustkit/issues"
   },
-  "homepage": "https://github.com/bjartebore/react-native-trustkit#readme",
+  "homepage": "https://github.com/statoil/react-native-trustkit#readme",
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
-    "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1"
   },
   "peerDependencies": {
+    "ajv": "^5.0.1",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0"
   }
