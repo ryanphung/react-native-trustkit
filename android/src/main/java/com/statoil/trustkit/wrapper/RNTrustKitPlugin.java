@@ -29,7 +29,7 @@ public class RNTrustKitPlugin extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void configure(ReadableMap configuration, Promise promise) {
-        promise.resolve(true);
+        promise.reject("not_implemented", "configure for android is not implemented");
     }
 
 }

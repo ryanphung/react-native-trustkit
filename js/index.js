@@ -60,7 +60,7 @@ export default (configuration) => {
   const { RNTrustKitPlugin } = NativeModules;
   return new Promise((resolve, reject) => {
     if (Platform.OS === 'android') {
-      reject(new Error("Android not currently supported"))
+      reject(new Error('Android not currently supported'));
     } else if (Platform.OS === 'ios') {
       if (configuration && iosValidate(configuration)) {
         resolve(RNTrustKitPlugin.configure(configuration));
