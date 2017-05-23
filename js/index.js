@@ -1,11 +1,12 @@
 import {
   NativeModules,
+  Platform,
 } from 'react-native';
 import Ajv from 'ajv';
 
 const ajv = new Ajv({});
 
-const validate = ajv.compile({
+const iosValidate = ajv.compile({
   title: 'TrustKitConfiguration',
   type: 'object',
   properties: {
@@ -55,13 +56,17 @@ const validate = ajv.compile({
 
 export default (configuration) => {
   const { RNTrustKitPlugin } = NativeModules;
-
   return new Promise((resolve, reject) => {
-    if (validate(configuration)) {
-      debugger;
-      resolve(RNTrustKitPlugin.configure(configuration));
-    } else {
-      reject(new Error('Configuration not valid'));
+    if (Platform.OS === 'android') {
+      resolve(RNTrustKitPlugin.configure());
+    } else if (Platform.OS === 'ios') {
+      if (configuration && iosValidate(configuration)) {
+        resolve(RNTrustKitPlugin.configure(configuration));
+      } else if (!configuration) {
+        resolve(RNTrustKitPlugin.configure());
+      } else {
+        reject(new Error('Configuration not valid'));
+      }
     }
   });
 };
