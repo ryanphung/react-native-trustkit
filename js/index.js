@@ -10,36 +10,38 @@ const iosValidate = ajv.compile({
   title: 'TrustKitConfiguration',
   type: 'object',
   properties: {
-    TSKSwizzleNetworkDelegates: {
+    SwizzleNetworkDelegates: {
       type: 'boolean',
     },
-    TSKPinnedDomain: {
+    PinnedDomain: {
       type: 'object',
       patternProperties: {
         '^.*$': {
           type: 'object',
           properties: {
-            TSKPublicKeyAlgorithms: {
+            PublicKeyAlgorithms: {
               type: 'array',
+              minItems: 1,
               items: {
-                enum: ['TSKAlgorithmRsa2048', 'TSKAlgorithmRsa4096'],
+                enum: ['AlgorithmRsa2048', 'AlgorithmRsa4096'],
               },
             },
-            TSKPublicKeyHashes: {
+            PublicKeyHashes: {
               type: 'array',
+              minItems: 2,
               items: {
                 oneOf: [
                   { type: 'string' },
                 ],
               },
             },
-            TSKIncludeSubdomains: {
+            IncludeSubdomains: {
               type: 'boolean',
             },
-            TSKEnforcePinning: {
+            EnforcePinning: {
               type: 'boolean',
             },
-            TSKReportUris: {
+            ReportUris: {
               type: 'array',
               items: {
                 oneOf: [
@@ -58,7 +60,7 @@ export default (configuration) => {
   const { RNTrustKitPlugin } = NativeModules;
   return new Promise((resolve, reject) => {
     if (Platform.OS === 'android') {
-      resolve(RNTrustKitPlugin.configure());
+      reject(new Error("Android not currently supported"))
     } else if (Platform.OS === 'ios') {
       if (configuration && iosValidate(configuration)) {
         resolve(RNTrustKitPlugin.configure(configuration));

@@ -32,7 +32,7 @@ RCT_REMAP_METHOD(configure,
                                userInfo: nil]);
     }
     @try {
-        
+
         [TrustKit initialize];
         _isTrustKitInitialized = YES;
         resolve( @"success" );
@@ -60,42 +60,42 @@ RCT_REMAP_METHOD(configure,
                                userInfo: nil]);
         return;
     }
-    
+
     @try
     {
-        
+
         NSMutableDictionary *trustKitConfig = [NSMutableDictionary dictionary];
-        
-        BOOL swizzleNetworkDelegates = [[config objectForKey:@"TSKSwizzleNetworkDelegates" ] boolValue];
+
+        BOOL swizzleNetworkDelegates = [[config objectForKey:@"SwizzleNetworkDelegates" ] boolValue];
         [trustKitConfig
          setObject: @(swizzleNetworkDelegates)
          forKey:kTSKSwizzleNetworkDelegates];
-        
+
         NSMutableDictionary *nextPinnedDomains= [NSMutableDictionary dictionary];
-        
-        if ([[config valueForKey:@"TSKPinnedDomain"] isKindOfClass:[NSDictionary class]]){
-            NSDictionary *tskPinnedDomains = [config objectForKey:@"TSKPinnedDomain"];
+
+        if ([[config valueForKey:@"PinnedDomain"] isKindOfClass:[NSDictionary class]]){
+            NSDictionary *tskPinnedDomains = [config objectForKey:@"PinnedDomain"];
             NSArray *keys = [tskPinnedDomains allKeys];
-            
+
             for (NSString *key in keys) {
-                
+
                 // incoming domain config
                 NSDictionary *domainConfig = [tskPinnedDomains valueForKey:key];
-                
+
                 // outgoing domain config
                 NSMutableDictionary *nextDomainConfig = [NSMutableDictionary dictionary];
-                
-                
-                
-                if ([[domainConfig valueForKey:@"TSKPublicKeyAlgorithms"] isKindOfClass:[NSArray class]]) {
+
+
+
+                if ([[domainConfig valueForKey:@"PublicKeyAlgorithms"] isKindOfClass:[NSArray class]]) {
                     NSMutableArray *nextPublicKeyAlgorithms = [NSMutableArray array];
-                    
-                    for (NSString *algorithm in [domainConfig valueForKey:@"TSKPublicKeyAlgorithms"]) {
-                        
-                        if ([algorithm isEqual:@"TSKAlgorithmRsa2048"]) {
+
+                    for (NSString *algorithm in [domainConfig valueForKey:@"PublicKeyAlgorithms"]) {
+
+                        if ([algorithm isEqual:@"AlgorithmRsa2048"]) {
                             [nextPublicKeyAlgorithms addObject:kTSKAlgorithmRsa2048];
                         }
-                        else if ([algorithm isEqual:@"TSKAlgorithmRsa4096"]) {
+                        else if ([algorithm isEqual:@"AlgorithmRsa4096"]) {
                             [nextPublicKeyAlgorithms addObject:kTSKAlgorithmRsa4096];
                         }
                     }
@@ -103,49 +103,49 @@ RCT_REMAP_METHOD(configure,
                      setObject:nextPublicKeyAlgorithms
                      forKey:kTSKPublicKeyAlgorithms];
                 }
-                
-                if ([[domainConfig valueForKey:@"TSKPublicKeyHashes"] isKindOfClass:[NSArray class]]) {
+
+                if ([[domainConfig valueForKey:@"PublicKeyHashes"] isKindOfClass:[NSArray class]]) {
                     [nextDomainConfig
-                     setObject: [domainConfig valueForKey:@"TSKPublicKeyHashes"]
+                     setObject: [domainConfig valueForKey:@"PublicKeyHashes"]
                      forKey:kTSKPublicKeyHashes];
                 }
-                
-                BOOL includeSubdomains = [[domainConfig objectForKey:@"TSKIncludeSubdomains" ] boolValue];
-                
+
+                BOOL includeSubdomains = [[domainConfig objectForKey:@"IncludeSubdomains" ] boolValue];
+
                 [nextDomainConfig
                  setObject: @(includeSubdomains)
                  forKey:kTSKIncludeSubdomains];
-                
-                BOOL enforcePinning = [[domainConfig objectForKey:@"TSKEnforcePinning" ] boolValue];
+
+                BOOL enforcePinning = [[domainConfig objectForKey:@"EnforcePinning" ] boolValue];
                 [nextDomainConfig
                  setObject: @(enforcePinning)
                  forKey:kTSKEnforcePinning];
-                
-                if ([[domainConfig valueForKey:@"TSKReportUris"] isKindOfClass:[NSArray class]]) {
+
+                if ([[domainConfig valueForKey:@"ReportUris"] isKindOfClass:[NSArray class]]) {
                     [nextDomainConfig
-                     setObject: [domainConfig valueForKey:@"TSKReportUris"]
+                     setObject: [domainConfig valueForKey:@"ReportUris"]
                      forKey:kTSKReportUris];
                 }
-                
+
                 // Append the next domain config to our configuration
                 [nextPinnedDomains
                  setObject:nextDomainConfig
                  forKey:key];
-                
+
             }
-            
+
         }
-        
+
         [trustKitConfig
          setObject:nextPinnedDomains
          forKey:kTSKPinnedDomains];
-        
+
         [TrustKit initializeWithConfiguration:trustKitConfig];
-        
+
         _isTrustKitInitialized = YES;
-        
+
         resolve(@"success");
-        
+
         //[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
     @catch (NSException *e)
