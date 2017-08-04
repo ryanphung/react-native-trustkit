@@ -1,6 +1,6 @@
 {
   "name": "react-native-trustkit-wrapper",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React native integration for TrustKit",
   "main": "js/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "ajv": "^5.0.1",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.44.0"
+    "react": "^16.0.0-alpha.12",
+    "react-native": "^0.47.1"
   }
 }
